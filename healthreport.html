@@ -142,6 +142,12 @@
             .btn-action {
                 flex-shrink: 0;
             }
+            .healthFilter .list-count{
+                display: none;
+            }
+            .health-page-header h4{
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -153,10 +159,7 @@
                 <div class="logo">TZ</div>
                 <span class="title">Sidebar</span>
             </div>
-            <div class="listIcon">
-                <i class="bi bi-list-task d-flex justify-content-end m-3" id="toggleButton"></i>
-            </div>
-    
+
             <nav class="nav flex-column">
                 <a href="./appointment.html" class="nav-link" data-title="Appointment">
                     <i class="bi bi-house-door"></i>
@@ -179,6 +182,11 @@
                     <span>Care Plan</span>
                 </a>
             </nav>
+
+            <div class="sidebar-footer">
+                <i class="bi bi-chevron-left toggle-icon" id="toggleButtonLeft"></i>
+                <i class="bi bi-chevron-right toggle-icon" id="toggleButtonRight"></i>
+            </div>
         </div>
     
     
