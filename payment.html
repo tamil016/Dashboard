@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Telth.care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./telthcare.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">TZ</div>
+                <span class="title">Sidebar</span>
+            </div>
+            <div class="listIcon">
+                <i class="bi bi-list-task d-flex justify-content-end m-3" id="toggleButton"></i>
+            </div>
+    
+            <nav class="nav flex-column">
+                <a href="./appointment.html" class="nav-link" data-title="Appointment">
+                    <i class="bi bi-house-door"></i>
+                    <span>Appointment</span>
+                </a>
+                <a href="./coupon.html" class="nav-link" data-title="Coupon">
+                    <i class="bi bi-speedometer2"></i>
+                    <span>Coupon</span>
+                </a>
+                <a href="./healthreport.html" class="nav-link" data-title="Health Report">
+                    <i class="bi bi-cart"></i>
+                    <span>Health Report</span>
+                </a>
+                <a href="./payment.html" class="nav-link" data-title="Payment">
+                    <i class="bi bi-wallet2"></i>
+                    <span>Payment</span>
+                </a>
+                <a href="./careplan.html" class="nav-link" data-title="Care Plan">
+                    <i class="bi bi-people"></i>
+                    <span>Care Plan</span>
+                </a>
+            </nav>
+        </div>
+    
+        <div class="main-content">
+            <div class="content-area">
+                <div class="page-header">
+                    <h4 class="mb-0">Payment</h4>
+                    <span class="list-count">List 03</span>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="table table-secondary" style="text-align: center;">
+                        <thead>
+                            <tr style="height: 60px">
+                                <th>Date</th>
+                                <th>Transaction ID</th>
+                                <th>Transaction Type</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height: 70px">
+                                <td>23/01/2023</td>
+                                <td>15445677</td>
+                                <td>UPI</td>
+                                <td><span class="status-paid">Paid</span></td>
+                            </tr>
+                            <tr style="height: 70px">
+                                <td>15/01/2023</td>
+                                <td>7642444</td>
+                                <td>Cash</td>
+                                <td><span class="status-pending">Pending</span></td>
+                            </tr>
+                            <tr style="height: 70px">
+                                <td>01/01/2023</td>
+                                <td>2566798</td>
+                                <td>UPI</td>
+                                <td><span class="status-paid">Paid</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./telthcare.js"></script>
+</body>
+</html>

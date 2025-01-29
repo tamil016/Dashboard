@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coupon - Telth.care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./telthcare.css">
+    <style>
+        .coupon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .coupon-card {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .coupon-info h5 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .coupon-code {
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media(max-width:450px){
+            .coupon-card{   
+                width: 200px;
+            }
+        }
+
+        @media(max-width:350px){
+            .coupon-card{
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">TZ</div>
+                <span class="title">Sidebar</span>
+            </div>
+            <div class="listIcon">
+                <i class="bi bi-list-task d-flex justify-content-end m-3" id="toggleButton"></i>
+            </div>
+    
+            <nav class="nav flex-column">
+                <a href="./appointment.html" class="nav-link" data-title="Appointment">
+                    <i class="bi bi-house-door"></i>
+                    <span>Appointment</span>
+                </a>
+                <a href="./coupon.html" class="nav-link" data-title="Coupon">
+                    <i class="bi bi-speedometer2"></i>
+                    <span>Coupon</span>
+                </a>
+                <a href="./healthreport.html" class="nav-link" data-title="Health Report">
+                    <i class="bi bi-cart"></i>
+                    <span>Health Report</span>
+                </a>
+                <a href="./payment.html" class="nav-link" data-title="Payment">
+                    <i class="bi bi-wallet2"></i>
+                    <span>Payment</span>
+                </a>
+                <a href="./careplan.html" class="nav-link" data-title="Care Plan">
+                    <i class="bi bi-people"></i>
+                    <span>Care Plan</span>
+                </a>
+            </nav>
+        </div>
+    
+    
+        <div class="main-content">
+            <div class="content-area">
+                <div class="page-header">
+                    <h4 class="mb-0">Coupon</h4>
+                </div>
+                
+                <div class="coupon-grid">
+                    <div class="coupon-card">
+                        <div class="coupon-info">
+                            <h5>Coupon 10%</h5>
+                            <div class="coupon-code">10/12/2023764474</div>
+                        </div>
+                    </div>
+    
+                    <div class="coupon-card">
+                        <div class="coupon-info">
+                            <h5>Gift credit 5%</h5>
+                            <div class="coupon-code">10/01/7585256614</div>
+                        </div>
+                    </div>
+    
+                    <div class="coupon-card">
+                        <div class="coupon-info">
+                            <h5>Gift credit</h5>
+                            <div class="coupon-code">No Coupons</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./telthcare.js"></script>
+</body>
+</html>

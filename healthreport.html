@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Report - Telth.care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./telthcare.css">
+    <style>
+        .report-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .report-card-heading {
+            border-bottom: 0.5px solid #666;
+        }
+
+        .report-icon {
+            width: 48px;
+            height: 48px;
+            background: #e2e8f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .report-main {
+            display: flex;
+            gap: 10px;
+            max-width: 25%;
+        }
+
+        .report-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .report-description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .report-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-action {
+            padding: 6px 12px;
+            font-size: 14px;
+            color: #666;
+            background: transparent;
+            border: none;
+        }
+
+        .btn-action:hover {
+            background: #eee;
+            border-radius: 6px;
+        }
+
+        .btn-action i {
+            margin-right: 4px;
+        }
+
+        .report-heading {
+            margin: 0px 20px 0px 10px;
+        }
+
+        .report-particulars {
+            width: 150px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .report-heading-date {
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            margin-left: 15px;
+        }
+
+        @media (max-width: 1100px) {
+            .report-heading-date {
+                margin: 0px;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .reports-list {
+                overflow-x: auto;
+            }
+
+            .report-card {
+                flex-wrap: nowrap;
+                min-width: 600px;
+            }
+
+            .report-main {
+                flex: 1;
+            }
+
+            .report-content h5{
+                font-size: 12px;
+            }
+
+            .report-description{
+                font-size: 11px;
+            }
+
+            .report-actions button{
+                font-size: 11px;
+            }
+
+            .report-particulars h6, .report-heading-date h6, .report-view-download h6{
+                font-size: 14px;
+            }
+
+            .report-date,
+            .report-actions {
+                flex-shrink: 0;
+                text-align: center;
+            }
+
+            .report-actions {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .btn-action {
+                flex-shrink: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">TZ</div>
+                <span class="title">Sidebar</span>
+            </div>
+            <div class="listIcon">
+                <i class="bi bi-list-task d-flex justify-content-end m-3" id="toggleButton"></i>
+            </div>
+    
+            <nav class="nav flex-column">
+                <a href="./appointment.html" class="nav-link" data-title="Appointment">
+                    <i class="bi bi-house-door"></i>
+                    <span>Appointment</span>
+                </a>
+                <a href="./coupon.html" class="nav-link" data-title="Coupon">
+                    <i class="bi bi-speedometer2"></i>
+                    <span>Coupon</span>
+                </a>
+                <a href="./healthreport.html" class="nav-link" data-title="Health Report">
+                    <i class="bi bi-cart"></i>
+                    <span>Health Report</span>
+                </a>
+                <a href="./payment.html" class="nav-link" data-title="Payment">
+                    <i class="bi bi-wallet2"></i>
+                    <span>Payment</span>
+                </a>
+                <a href="./careplan.html" class="nav-link" data-title="Care Plan">
+                    <i class="bi bi-people"></i>
+                    <span>Care Plan</span>
+                </a>
+            </nav>
+        </div>
+    
+    
+        <div class="main-content">
+            <div class="content-area">
+                <div class="health-page-header d-flex justify-content-between">
+                    <div>
+                        <h4 class="mb-0">Health Report</h4>
+                    </div>
+                    <div class="healthFilter d-flex gap-2 justify-content-center align-items-center">
+                        <i class="bi bi-filter fs-3"></i>
+                        <h5 class="list-count">Filter</h5>
+                    </div>
+                </div>
+    
+                <div class="reports-list">
+                    <div class="report-card report-card-heading d-flex mb-0">
+                        <div class="report-main report-particulars">
+                            <h6>Particulars</h6>
+                        </div>
+                        <div class="report-date report-heading-date">
+                            <h6>Date</h6>
+                        </div>
+                        <div class="report-actions report-view-download">
+                            <h6>View / Download</h6>
+                        </div>
+                    </div>
+                    <div class="report-card d-flex">
+                        <div class="report-main">
+                            <div class="report-icon">
+                                <i class="bi bi-file-text"></i>
+                            </div>
+                            <div class="report-content">
+                                <h5 class="report-title">Vel pellentesque bibendum.</h5>
+                                <p class="report-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="report-date report-description">
+                            23/01/2025
+                        </div>
+                        <div class="report-actions">
+                            <button class="btn-action">
+                                <i class="bi bi-eye"></i>
+                                View
+                            </button>
+                            <button class="btn-action">
+                                <i class="bi bi-download"></i>
+                                Download
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div class="report-card d-flex">
+                        <div class="report-main">
+                            <div class="report-icon">
+                                <i class="bi bi-file-text"></i>
+                            </div>
+                            <div class="report-content">
+                                <h5 class="report-title">Magna quis at non</h5>
+                                <p class="report-description">Lorem ipsum dolor sit amet, consectetur elit
+                                    libero.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="report-date report-description">
+                            23/01/2025
+                        </div>
+                        <div class="report-actions">
+                            <button class="btn-action">
+                                <i class="bi bi-eye"></i>
+                                View
+                            </button>
+                            <button class="btn-action">
+                                <i class="bi bi-download"></i>
+                                Download
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div class="report-card d-flex">
+                        <div class="report-main">
+                            <div class="report-icon">
+                                <i class="bi bi-file-text"></i>
+                            </div>
+                            <div class="report-content">
+                                <h5 class="report-title">Cursus tortor ac eget</h5>
+                                <p class="report-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="report-date report-description">
+                            23/01/2025
+                        </div>
+                        <div class="report-actions">
+                            <button class="btn-action">
+                                <i class="bi bi-eye"></i>
+                                View
+                            </button>
+                            <button class="btn-action">
+                                <i class="bi bi-download"></i>
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./telthcare.js"></script>
+</body>
+</html>
